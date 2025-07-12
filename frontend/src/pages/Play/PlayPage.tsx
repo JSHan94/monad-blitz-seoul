@@ -22,12 +22,12 @@ const PlayPage: React.FC<PlayPageProps> = ({ isAuthenticated }) => {
 
   const handleRefreshEnhancement = () => {
     setResetEnhancementTrigger(prev => !prev);
-    setPlays(0); // Reset plays to 0 on refresh
+    setPlays(5); // Reset plays to 0 on refresh
   };
 
   const handleEnhancementAttempt = () => {
     setPoints(prevPoints => prevPoints - 100); // Deduct 100 points
-    setPlays(prevPlays => prevPlays + 1); // Increment plays
+    setPlays(prevPlays => prevPlays -1); // Increment plays
   };
 
   useEffect(() => {
@@ -42,7 +42,7 @@ const PlayPage: React.FC<PlayPageProps> = ({ isAuthenticated }) => {
         <div className="dashboard-card points-card">
           <h3>Your Current Points</h3>
           <p className="points-value">{points === null ? '0' : points}</p>
-          <p className="plays-value">Plays: {plays}</p>
+          <p className="plays-value">Left Try: {plays}</p>
           <button onClick={handleSwapPoints} className="swap-button">Swap</button>
           <button onClick={handleRefreshEnhancement} className="refresh-button">Refresh</button>
         </div>
