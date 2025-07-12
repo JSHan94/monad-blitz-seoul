@@ -1,0 +1,11 @@
+{
+    "apps" : [
+        {
+            "name" : "backend",
+            "cwd" : ".",
+            "script" : "npm run start",
+            "watch" : false,
+            "autorestart" : true
+        }
+    ]
+}

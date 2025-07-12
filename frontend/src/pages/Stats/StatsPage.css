@@ -1,0 +1,118 @@
+.leaderboard-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: var(--color-primary-DEFAULT);
+  text-align: center;
+  overflow-y: auto;
+  height: calc(100vh - 120px);
+}
+
+.leaderboard-page::-webkit-scrollbar {
+  width: 12px;
+}
+
+.leaderboard-page::-webkit-scrollbar-track {
+  background: var(--color-surface-DEFAULT);
+  border-radius: 10px;
+}
+
+.leaderboard-page::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary-DEFAULT);
+  border-radius: 10px;
+  border: 3px solid var(--color-surface-DEFAULT);
+  box-shadow: 0 0 8px var(--color-primary-light);
+}
+
+.leaderboard-page::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 0 12px var(--color-primary-DEFAULT);
+}
+
+.leaderboard-title {
+  font-size: 2.5rem;
+  color: var(--color-primary-DEFAULT);
+  text-shadow: 0 0 10px var(--color-primary-DEFAULT);
+  margin-bottom: 30px;
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 15px;
+}
+
+.tab-button {
+  background-color: var(--color-secondary-DEFAULT);
+  color: var(--color-primary-DEFAULT);
+  border: 1px solid var(--color-primary-DEFAULT);
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px var(--color-primary-light);
+}
+
+.tab-button:hover,
+.tab-button.active {
+  background-color: var(--color-primary-DEFAULT);
+  color: var(--color-surface-darker);
+  box-shadow: 0 0 15px var(--color-primary-DEFAULT);
+  transform: translateY(-2px);
+}
+
+.tab-content {
+  background-color: var(--color-surface-DEFAULT);
+  border: 2px solid var(--color-primary-DEFAULT);
+  box-shadow: 0 0 15px var(--color-primary-light);
+  padding: 20px;
+  max-width: 800px; /* Set max-width to match leaderboard table */
+  margin: 0 auto; /* Center the tab content */
+}
+
+/* Mobile adjustments for LeaderboardPage */
+@media (max-width: 767px) {
+  .leaderboard-page {
+    padding: 10px;
+  }
+
+  .leaderboard-title {
+    font-size: 2rem;
+  }
+
+  .tabs-container {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .tab-button {
+    padding: 8px 15px;
+    font-size: 1rem;
+  }
+
+  .tab-content {
+    padding: 15px;
+  }
+}
+
+.stats-page-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.profile-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.leaderboard-page {
+  flex: 2;
+}
+
+.user-profile-card-container {
+  margin-bottom: 30px;
+}
+

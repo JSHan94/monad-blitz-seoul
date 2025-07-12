@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+:root {
+  /* Primary - Neon Green */
+  --color-primary-DEFAULT: #00ff99;
+  --color-primary-light: #66ffcc;
+  --color-primary-dark: #00cc7a;
+
+  /* Secondary - Dark Blue/Purple */
+  --color-secondary-DEFAULT: #330066;
+  --color-secondary-light: #663399;
+  --color-secondary-dark: #1a0033;
+
+  /* Accent - Vibrant Pink/Magenta */
+  --color-accent-DEFAULT: #ff00ff;
+  --color-accent-light: #ff66ff;
+  --color-accent-dark: #cc00cc;
+
+  /* Surface - Dark Grays/Blacks */
+  --color-surface-DEFAULT: #1a1a1a;
+  --color-surface-light: #2a2a2a;
+  --color-surface-dark: #0a0a0a;
+  --color-surface-darker: #000000;
+
+  /* Info - Light Blue */
+  --color-info-DEFAULT: #00bfff;
+  --color-info-light: #66d9ff;
+  --color-info-dark: #0080b3;
+
+  /* Success - Green */
+  --color-success-DEFAULT: #28a745;
+  --color-success-light: #5cb85c;
+  --color-success-dark: #218838;
+
+  /* Warning - Orange/Yellow */
+  --color-warning-DEFAULT: #ffc107;
+  --color-warning-light: #ffe082;
+  --color-warning-dark: #e0a800;
+
+  /* Error - Red */
+  --color-error-DEFAULT: #dc3545;
+  --color-error-light: #e76c79;
+  --color-error-dark: #c82333;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden; /* Prevent scrollbars if content doesn't fit perfectly */
+}
+
+body {
+  background-color: var(--color-surface-darker); /* Mostly black background */
+  color: var(--color-primary-DEFAULT); /* Neon green accent */
+  font-family: 'Press Start 2P', cursive; /* Retro/pixel monospace font */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 5px var(--color-primary-DEFAULT); /* Subtle glow effect */
+}
+
+code {
+  font-family: 'Press Start 2P', cursive;
+}

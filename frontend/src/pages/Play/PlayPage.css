@@ -1,0 +1,83 @@
+.play-page-container {
+  background-color: var(--color-surface-DEFAULT);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centers the enhancement module */
+  width: 100%;
+  flex-grow: 1; /* Allows it to take available space */
+  position: relative; /* For positioning leaderboard */
+  gap: 20px;
+}
+
+.user-points-display {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+  color: var(--color-primary-DEFAULT);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.swap-button {
+  background-color: var(--color-secondary-DEFAULT);
+  color: var(--color-primary-DEFAULT);
+  border: 1px solid var(--color-primary-DEFAULT);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swap-button:hover {
+  background-color: var(--color-primary-DEFAULT);
+  color: var(--color-surface-darker);
+  box-shadow: 0 0 10px var(--color-primary-DEFAULT);
+}
+
+.refresh-button {
+  background-color: var(--color-secondary-DEFAULT);
+  color: var(--color-primary-DEFAULT);
+  border: 1px solid var(--color-primary-DEFAULT);
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 10px; /* Add some space between buttons */
+}
+
+.refresh-button:hover {
+  background-color: var(--color-primary-DEFAULT);
+  color: var(--color-surface-darker);
+  box-shadow: 0 0 10px var(--color-primary-DEFAULT);
+}
+
+.dashboard-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Adjust this value as needed */
+}
+
+.leaderboard-on-play-page {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Mobile adjustments for PlayPage */
+@media (max-width: 767px) {
+  .play-page-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .leaderboard-on-play-page {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+}

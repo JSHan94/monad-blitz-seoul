@@ -1,0 +1,119 @@
+.market-item-card {
+  background-color: var(--color-surface-DEFAULT); /* Dark gray from other components */
+  border: 2px solid var(--color-primary-DEFAULT); /* Neon green border */
+  box-shadow: 0 0 15px var(--color-primary-light); /* Subtle neon glow */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: var(--color-primary-DEFAULT);
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.market-item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px var(--color-primary-DEFAULT); /* Stronger neon glow */
+}
+
+.item-thumbnail {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  margin-bottom: 10px;
+  border: 1px solid var(--color-primary-DEFAULT);
+  border-radius: 5px;
+}
+
+.item-name {
+  font-size: 1.2rem;
+  color: var(--color-primary-DEFAULT);
+  text-shadow: 0 0 5px var(--color-primary-DEFAULT);
+  margin-bottom: 5px;
+}
+
+.item-price,
+.item-stock {
+  font-size: 0.9rem;
+  margin-bottom: 5px;
+}
+
+.item-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.buy-button,
+.sell-button {
+  background-color: var(--color-secondary-DEFAULT); /* Darker green for buttons */
+  color: var(--color-primary-DEFAULT);
+  border: 1px solid var(--color-primary-DEFAULT);
+  padding: 8px 15px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px var(--color-primary-light);
+}
+
+.buy-button:hover,
+.sell-button:hover {
+  background-color: var(--color-primary-DEFAULT);
+  color: var(--color-surface-darker);
+  box-shadow: 0 0 10px var(--color-primary-DEFAULT);
+  transform: translateY(-2px);
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.confirm-button,
+.cancel-button {
+  background-color: var(--color-secondary-DEFAULT);
+  color: var(--color-primary-DEFAULT);
+  border: 1px solid var(--color-primary-DEFAULT);
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 5px var(--color-primary-light);
+}
+
+.confirm-button:hover,
+.cancel-button:hover {
+  background-color: var(--color-primary-DEFAULT);
+  color: var(--color-surface-darker);
+  box-shadow: 0 0 10px var(--color-primary-DEFAULT);
+  transform: translateY(-2px);
+}
+
+/* Mobile adjustments for MarketItemCard */
+@media (max-width: 767px) {
+  .market-item-card {
+    padding: 10px;
+  }
+
+  .item-thumbnail {
+    width: 80px;
+    height: 80px;
+  }
+
+  .item-name {
+    font-size: 1rem;
+  }
+
+  .item-price,
+  .item-stock {
+    font-size: 0.8rem;
+  }
+
+  .buy-button,
+  .sell-button {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+}
